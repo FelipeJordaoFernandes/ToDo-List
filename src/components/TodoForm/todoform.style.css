@@ -1,0 +1,8 @@
+.todo-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 0 40px;
+}
