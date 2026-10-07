@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import TodoContext from "./TodoContext";
+import { loadTodos, saveTodos } from '../../storage';
 
 export function TodoProvider({ children }) {
-  const savedTodos = localStorage.getItem("todos");
-
-  const [todos, setTodos] = useState(savedTodos ? JSON.parse(savedTodos) : []);
+  const [todos, setTodos] = useState([]);
+  const [ready, setReady] = useState(false);
+  const [storageMessage, setStorageMessage] = useState('');
+  const writable = useRef(true);
   const [showDialog, setShowDialog] = useState(false);
   const [selectedTodo, setSelectedTodo] = useState();
 
   const openFormTodoDialog = (todo) => {
-    if (todo) {
-      setSelectedTodo(todo);
-    }
+    setSelectedTodo(todo || null);
     setShowDialog(true);
   };
 
@@ -21,8 +21,18 @@ export function TodoProvider({ children }) {
   };
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
+    const result = loadTodos(() => window.localStorage);
+    setTodos(result.todos);
+    writable.current = result.writable;
+    setStorageMessage(result.message);
+    setReady(true);
+  }, []);
+
+  useEffect(() => {
+    if (!ready || !writable.current) return;
+    const message = saveTodos(() => window.localStorage, todos);
+    if (message) { writable.current = false; setStorageMessage(message); }
+  }, [todos, ready]);
 
   const addTodo = (formData) => {
     const description = formData.get("description").trim();
@@ -93,7 +103,9 @@ export function TodoProvider({ children }) {
         openFormTodoDialog,
         closeFormTodoDialog,
         selectedTodo,
-        editTodo
+        editTodo,
+        storageMessage,
+        ready
       }}
     >
       {children}

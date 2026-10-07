@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://to-do-list-seven-lyart-36.vercel.app/sitemap.xml

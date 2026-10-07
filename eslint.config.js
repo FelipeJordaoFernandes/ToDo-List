@@ -4,7 +4,9 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'artifacts'] },
+  { files: ['scripts/**/*.mjs', 'tests/**/*.mjs'], languageOptions: { globals: globals.node }, rules: js.configs.recommended.rules },
+  { files: ['scripts/audit-ui.mjs'], languageOptions: { globals: globals.browser } },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {

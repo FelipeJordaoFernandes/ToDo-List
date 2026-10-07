@@ -1,6 +1,2 @@
-.header {
-    padding: 24px;
-    background-color: #877EED;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
+.header { padding: 36px 40px 28px; }
+@media (max-width: 600px) { .header { padding: 28px 22px 24px; } }

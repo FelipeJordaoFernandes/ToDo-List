@@ -1,58 +1,70 @@
-![](thumbnail.png)
+# To Do List
 
-# App de Checklist de Estudos
+Uma lista de tarefas simples e acolhedora: organize o dia, edite seus planos e acompanhe o que já concluiu.
 
-Um projeto prático desenvolvido passo a passo para quem já tem o básico de ReactJS e quer evoluir para construir aplicações mais organizadas, escaláveis e com experiência moderna. Ao longo do curso, criamos um app de checklist para organizar estudos, tarefas e o que mais precisar.
+[Aplicação publicada](https://to-do-list-seven-lyart-36.vercel.app/) · [Auditoria e limites](docs/auditoria.md) · [Direção visual e arte](docs/identidade-e-arte.md)
 
-## 🔨 Funcionalidades do projeto
+## Funcionalidades
 
-* Adição, edição e exclusão de tarefas
-* Organização das tarefas em "Para estudar" e "Concluído"
-* Marcação de tarefas como concluídas
-* Feedback visual para lista vazia (empty state)
-* Modal para adicionar/editar tarefas
-* Lista animada de tarefas
+- Criar, editar, concluir, reabrir e excluir tarefas.
+- Grupos de tarefas a fazer e concluídas, contadores e estado vazio.
+- Persistência no navegador pela chave legada `todos`, preservando identificadores e campos existentes.
+- Aviso e uso temporário em memória se o armazenamento estiver bloqueado, cheio ou inválido. Dados inválidos originais não são sobrescritos.
+- Modal com formulário rotulado, validação de espaços em branco, Escape, ciclo de Tab/Shift+Tab e retorno do foco.
+- Layout responsivo, fundo ilustrado com versão mobile, foco visível e movimento reduzido.
+- HTML inicial pré-renderizado, metadados de compartilhamento, canonical, robots e sitemap.
 
-![](screen-capture.png)
+Não há conta, servidor de tarefas ou sincronização entre dispositivos. Limpar os dados do site remove as tarefas salvas. As tarefas privadas não são incluídas no HTML gerado durante o build.
 
-## ✔️ Técnicas e tecnologias utilizadas
+## Tecnologias
 
-O desenvolvimento do projeto aborda as seguintes técnicas e tecnologias:
+React 19, JavaScript, Vite, CSS comum por componente, Context API e localStorage. ESLint, testes nativos do Node, Playwright, axe e Lighthouse apoiam a validação. Sharp otimiza os assets. Não utiliza CSS Modules.
 
-* **useState e useEffect**: Gerenciamento de estado e persistência no localStorage
-* **useContext**: Contexto global para compartilhar estado das tarefas
-* **Componentização**: Componentes reutilizáveis como Button, FabButton, Dialog, TodoForm, TodoItem e TodoGroup
-* **Estilização com CSS Modules**: Organização dos estilos por componente
-* **Manipulação de formulários controlados**
-* **Persistência local com localStorage**: Salva as tarefas mesmo fechando o app
-* **Ícones SVG personalizados**
-* **Boas práticas de organização de código**
+Projeto originado de estudos React na Alura, posteriormente refinado com identidade própria, acessibilidade, responsividade e auditorias de qualidade.
 
-## 🛠️ Como rodar o projeto
+## Executar
 
-Após baixar o projeto, siga os passos abaixo para executar localmente:
+Requer Node.js **22.19 ou superior** e npm. Os testes de navegador e Lighthouse usam Google Chrome instalado; `AUDIT_BROWSER=msedge` seleciona Edge no teste de interface.
 
-1. Certifique-se de que você já tem Node.js instalado ([guia oficial](https://nodejs.org/en/download/)).
-2. No terminal, navegue até a pasta do projeto e instale as dependências:
-
-```bash
-npm install
-```
-
-3. Execute o projeto:
-
-```bash
+```sh
+npm ci
 npm run dev
 ```
 
-4. Acesse no navegador: [http://localhost:5173](http://localhost:5173) (Vite).
+O Vite informa o endereço local (normalmente `http://localhost:5173`).
 
-## 📚 Mais informações do curso
+```sh
+npm run lint
+npm test
+npm run build
+npm run preview -- --host 127.0.0.1 --port 4174 --strictPort
+```
 
-Curtiu o projeto e quer aprender na prática? O passo a passo completo faz parte do segundo ccurso da carreira React da Alura, com foco em experiência real de desenvolvimento, boas práticas e refatoração progressiva.
+O build gera `dist/` com a interface inicial renderizada e hidratada pelo React. O botão de criação só é habilitado depois da inicialização, impedindo interação com HTML ainda sem JavaScript.
 
-Se quiser experimentar, explore o código e customize o checklist do seu jeito!
+Com a prévia em execução, abra outro terminal:
 
----
+```sh
+npm run audit:ui
+npm run audit:lighthouse
+npm audit
+```
 
-Vida longa e próspera 🚀
+Os scripts usam `http://127.0.0.1:4174/`. `AUDIT_URL` altera o destino, `AUDIT_RUNS` a quantidade de medições Lighthouse (padrão: 3 por perfil), e `AUDIT_PHASE` identifica a pasta de evidências. Configure essas variáveis conforme seu shell. Use uma origem de teste: os roteiros de interface criam tarefas fictícias em perfis descartáveis do navegador.
+
+Relatórios JSON/HTML e capturas ficam em `artifacts/`, ignorado pelo Git. O resumo da revisão está versionado em `docs/`.
+
+## Estrutura
+
+- `src/App.jsx`: composição da interface.
+- `src/components/`: controles, modal, formulário, grupos e contexto.
+- `src/storage.js`: leitura/gravação defensiva mantendo o contrato legado.
+- `src/index.css`: tokens locais e layout responsivo.
+- `src/prerender.jsx` e `scripts/build.mjs`: HTML inicial no build, sem dados pessoais.
+- `public/`: arte otimizada, favicon, compartilhamento e arquivos de indexação.
+- `tests/`: compatibilidade e falhas do armazenamento.
+- `scripts/audit-*.mjs`: validação funcional, acessibilidade e Lighthouse.
+
+## Publicação
+
+GitHub integrado à Vercel. A branch principal é `master`. Alterações seguem por PR; a prévia da PR e a produção são ambientes distintos. O merge exige aprovação explícita. As URLs públicas dos metadados apontam para a produção; seus novos assets ficam disponíveis nela após integrar a PR.

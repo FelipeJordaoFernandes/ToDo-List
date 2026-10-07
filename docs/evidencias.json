@@ -1,0 +1,643 @@
+{
+  "baseline": {
+    "url": "http://127.0.0.1:4174/",
+    "phase": "baseline",
+    "results": [
+      {
+        "mode": "mobile",
+        "run": 1,
+        "version": "13.5.0",
+        "date": "2026-10-07T23:25:37.342Z",
+        "scores": {
+          "performance": 93,
+          "accessibility": 89,
+          "best-practices": 96,
+          "seo": 83
+        },
+        "metrics": {
+          "first-contentful-paint": 1544.81385,
+          "largest-contentful-paint": 3159.0336,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0.012927958927963291
+        },
+        "findings": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "display": "1,5 s"
+          },
+          {
+            "id": "largest-contentful-paint",
+            "title": "Largest Contentful Paint",
+            "display": "3,2 s"
+          },
+          {
+            "id": "interactive",
+            "title": "Time to Interactive",
+            "display": "3,2 s"
+          },
+          {
+            "id": "image-size-responsive",
+            "title": "Exibe imagens em baixa resolução"
+          },
+          {
+            "id": "unsized-images",
+            "title": "Os elementos de imagem não têm `width` e `height` explícitas"
+          },
+          {
+            "id": "button-name",
+            "title": "Os botões não têm um nome acessível"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduza o JavaScript não usado",
+            "display": "Economia estimada de 30 KiB"
+          },
+          {
+            "id": "meta-description",
+            "title": "O documento não tem uma metadescrição"
+          },
+          {
+            "id": "robots-txt",
+            "title": "robots.txt não é válido",
+            "display": "18 erros encontrados"
+          },
+          {
+            "id": "bf-cache",
+            "title": "A página impede a restauração do cache de avanço e retorno",
+            "display": "2 motivos para a falha"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árvore de dependência da rede"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitações que bloquearam a renderização",
+            "display": "Economia estimada de 490 ms"
+          }
+        ]
+      },
+      {
+        "mode": "desktop",
+        "run": 1,
+        "version": "13.5.0",
+        "date": "2026-10-07T23:25:44.221Z",
+        "scores": {
+          "performance": 99,
+          "accessibility": 89,
+          "best-practices": 100,
+          "seo": 83
+        },
+        "metrics": {
+          "first-contentful-paint": 817.1931999999999,
+          "largest-contentful-paint": 817.1931999999999,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0.002718415929720106
+        },
+        "findings": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "display": "0,8 s"
+          },
+          {
+            "id": "largest-contentful-paint",
+            "title": "Largest Contentful Paint",
+            "display": "0,8 s"
+          },
+          {
+            "id": "speed-index",
+            "title": "Speed Index",
+            "display": "0,8 s"
+          },
+          {
+            "id": "unsized-images",
+            "title": "Os elementos de imagem não têm `width` e `height` explícitas"
+          },
+          {
+            "id": "button-name",
+            "title": "Os botões não têm um nome acessível"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduza o JavaScript não usado",
+            "display": "Economia estimada de 30 KiB"
+          },
+          {
+            "id": "meta-description",
+            "title": "O documento não tem uma metadescrição"
+          },
+          {
+            "id": "robots-txt",
+            "title": "robots.txt não é válido",
+            "display": "18 erros encontrados"
+          },
+          {
+            "id": "bf-cache",
+            "title": "A página impede a restauração do cache de avanço e retorno",
+            "display": "2 motivos para a falha"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árvore de dependência da rede"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitações que bloquearam a renderização",
+            "display": "Economia estimada de 540 ms"
+          }
+        ]
+      }
+    ]
+  },
+  "final": {
+    "url": "http://127.0.0.1:4174/",
+    "phase": "final",
+    "results": [
+      {
+        "mode": "mobile",
+        "run": 1,
+        "version": "13.5.0",
+        "date": "2026-10-07T23:35:33.111Z",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "first-contentful-paint": 1201.8117,
+          "largest-contentful-paint": 1501.8116999999997,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0
+        },
+        "findings": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "display": "1,2 s"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduza o JavaScript não usado",
+            "display": "Economia estimada de 28 KiB"
+          },
+          {
+            "id": "bf-cache",
+            "title": "A página impede a restauração do cache de avanço e retorno",
+            "display": "2 motivos para a falha"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árvore de dependência da rede"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitações que bloquearam a renderização",
+            "display": "Economia estimada de 150 ms"
+          }
+        ]
+      },
+      {
+        "mode": "mobile",
+        "run": 2,
+        "version": "13.5.0",
+        "date": "2026-10-07T23:35:39.819Z",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "first-contentful-paint": 1201.7382,
+          "largest-contentful-paint": 1501.7382000000002,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0
+        },
+        "findings": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "display": "1,2 s"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduza o JavaScript não usado",
+            "display": "Economia estimada de 28 KiB"
+          },
+          {
+            "id": "bf-cache",
+            "title": "A página impede a restauração do cache de avanço e retorno",
+            "display": "2 motivos para a falha"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árvore de dependência da rede"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitações que bloquearam a renderização",
+            "display": "Economia estimada de 150 ms"
+          }
+        ]
+      },
+      {
+        "mode": "mobile",
+        "run": 3,
+        "version": "13.5.0",
+        "date": "2026-10-07T23:35:46.351Z",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "first-contentful-paint": 1201.6576,
+          "largest-contentful-paint": 1501.6576,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0
+        },
+        "findings": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "display": "1,2 s"
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduza o JavaScript não usado",
+            "display": "Economia estimada de 28 KiB"
+          },
+          {
+            "id": "bf-cache",
+            "title": "A página impede a restauração do cache de avanço e retorno",
+            "display": "2 motivos para a falha"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árvore de dependência da rede"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitações que bloquearam a renderização",
+            "display": "Economia estimada de 150 ms"
+          }
+        ]
+      },
+      {
+        "mode": "desktop",
+        "run": 1,
+        "version": "13.5.0",
+        "date": "2026-10-07T23:35:52.957Z",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "first-contentful-paint": 322.0026,
+          "largest-contentful-paint": 363.0039,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0
+        },
+        "findings": [
+          {
+            "id": "unused-javascript",
+            "title": "Reduza o JavaScript não usado",
+            "display": "Economia estimada de 28 KiB"
+          },
+          {
+            "id": "bf-cache",
+            "title": "A página impede a restauração do cache de avanço e retorno",
+            "display": "2 motivos para a falha"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árvore de dependência da rede"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitações que bloquearam a renderização"
+          }
+        ]
+      },
+      {
+        "mode": "desktop",
+        "run": 2,
+        "version": "13.5.0",
+        "date": "2026-10-07T23:35:59.626Z",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "first-contentful-paint": 321.7321,
+          "largest-contentful-paint": 362.59815000000003,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0
+        },
+        "findings": [
+          {
+            "id": "unused-javascript",
+            "title": "Reduza o JavaScript não usado",
+            "display": "Economia estimada de 28 KiB"
+          },
+          {
+            "id": "bf-cache",
+            "title": "A página impede a restauração do cache de avanço e retorno",
+            "display": "2 motivos para a falha"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árvore de dependência da rede"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitações que bloquearam a renderização"
+          }
+        ]
+      },
+      {
+        "mode": "desktop",
+        "run": 3,
+        "version": "13.5.0",
+        "date": "2026-10-07T23:36:06.016Z",
+        "scores": {
+          "performance": 100,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "metrics": {
+          "first-contentful-paint": 321.9156,
+          "largest-contentful-paint": 362.8734,
+          "total-blocking-time": 0,
+          "cumulative-layout-shift": 0
+        },
+        "findings": [
+          {
+            "id": "unused-javascript",
+            "title": "Reduza o JavaScript não usado",
+            "display": "Economia estimada de 28 KiB"
+          },
+          {
+            "id": "bf-cache",
+            "title": "A página impede a restauração do cache de avanço e retorno",
+            "display": "2 motivos para a falha"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Árvore de dependência da rede"
+          },
+          {
+            "id": "render-blocking-insight",
+            "title": "Solicitações que bloquearam a renderização"
+          }
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "base": "http://127.0.0.1:4174/",
+    "browser": "msedge",
+    "results": [
+      {
+        "state": "empty",
+        "width": 320,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 35
+      },
+      {
+        "state": "dialog",
+        "width": 320,
+        "violations": 0,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#task-hint"
+              ]
+            ]
+          }
+        ],
+        "passes": 22,
+        "manualReview": {
+          "target": "#task-hint",
+          "colors": {
+            "foreground": "rgb(88, 102, 91)",
+            "background": "rgb(252, 252, 247)"
+          },
+          "note": "Texto visível sem sobreposição na captura do modal; contraste 5,89:1, WCAG AA."
+        }
+      },
+      {
+        "state": "completed",
+        "width": 320,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "pending",
+        "width": 320,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "empty",
+        "width": 390,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 35
+      },
+      {
+        "state": "dialog",
+        "width": 390,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 22
+      },
+      {
+        "state": "completed",
+        "width": 390,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "pending",
+        "width": 390,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "empty",
+        "width": 768,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 35
+      },
+      {
+        "state": "dialog",
+        "width": 768,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 22
+      },
+      {
+        "state": "completed",
+        "width": 768,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "pending",
+        "width": 768,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "empty",
+        "width": 1024,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 35
+      },
+      {
+        "state": "dialog",
+        "width": 1024,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 22
+      },
+      {
+        "state": "completed",
+        "width": 1024,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "pending",
+        "width": 1024,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "empty",
+        "width": 1440,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 35
+      },
+      {
+        "state": "dialog",
+        "width": 1440,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 22
+      },
+      {
+        "state": "completed",
+        "width": 1440,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "pending",
+        "width": 1440,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "legacy-long-text-reduced-motion",
+        "width": 390,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "text-200-percent",
+        "width": 390,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "corrupt",
+        "width": 320,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "blocked",
+        "width": 320,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "quota",
+        "width": 320,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 40
+      },
+      {
+        "state": "short-viewport-390",
+        "width": 844,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 21
+      },
+      {
+        "state": "short-viewport-568",
+        "width": 320,
+        "violations": 0,
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "targets": [
+              [
+                "#task-hint"
+              ]
+            ]
+          }
+        ],
+        "passes": 21,
+        "manualReview": {
+          "target": "#task-hint",
+          "colors": {
+            "foreground": "rgb(88, 102, 91)",
+            "background": "rgb(252, 252, 247)"
+          },
+          "note": "Texto visível sem sobreposição na captura do modal; contraste 5,89:1, WCAG AA."
+        }
+      },
+      {
+        "state": "short-viewport-600",
+        "width": 768,
+        "violations": 0,
+        "incomplete": [],
+        "passes": 21
+      }
+    ],
+    "errors": []
+  }
+}

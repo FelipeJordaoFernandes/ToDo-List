@@ -1,10 +1,2 @@
-.subheading {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 120%;
-    color: #877EED;
-    border-bottom: 2px dotted #877EED;
-    padding-bottom: 8px;
-    margin: 0;
-    margin-bottom: 24px;
-}
+.subheading { display: flex; align-items: center; gap: 10px; margin: 26px 0 10px; font-size: .9375rem; font-weight: 600; color: #202824; }
+.task-count { border-radius: 6px; padding: 2px 7px; background: #e7eee3; color: var(--green); font-size: .75rem; }
