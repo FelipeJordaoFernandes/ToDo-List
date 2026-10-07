@@ -1,11 +1,1 @@
-.heading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    margin: 0;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 120%;
-    color: #1E1E1E;
-}
+.heading { margin: 0; font-size: clamp(2.25rem, 7vw, 2.8rem); line-height: 1.15; font-weight: 650; letter-spacing: -.045em; color: #202824; }

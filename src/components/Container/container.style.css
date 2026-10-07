@@ -1,8 +1,1 @@
-.container {
-    background-color: #1E1E1E;
-    border-radius: 16px;
-    width: 440px;
-    max-width: 90%;
-    margin: 0 auto;
-    margin-top: 60px;
-}
+.container { width: min(100%, 580px); margin: 0 auto; border: 1px solid #e1e6da; border-radius: 22px; background: var(--paper); box-shadow: 0 16px 50px #203d2724, 0 3px 8px #203d2712; }

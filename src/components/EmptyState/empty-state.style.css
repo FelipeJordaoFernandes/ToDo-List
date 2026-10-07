@@ -1,16 +1,4 @@
-.empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 40px;
-  gap: 24px;
-}
-
-.empty-state p {
-    margin: 0;
-    color: #EAEAEA;
-    text-align: center;
-    font-size: 16px;
-    line-height: 150%;
-}
+.empty-state { display: flex; flex-direction: column; align-items: center; padding: 36px 0; text-align: center; }
+.empty-state svg { margin-bottom: 18px; }
+.empty-state h2 { margin: 0 0 8px; font-size: 1.0625rem; line-height: 1.5; font-weight: 600; letter-spacing: -.02em; }
+.empty-state p { margin: 0; color: var(--muted); font-size: .875rem; }

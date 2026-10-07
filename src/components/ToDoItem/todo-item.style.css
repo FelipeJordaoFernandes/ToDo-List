@@ -1,56 +1,12 @@
-.todo-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.todo-item .date {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-    color: #EAEAEA;
-    margin: 0;
-}
-
-.todo-item .details {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-.todo-item.completed .details {
-    text-decoration: line-through;
-}
-
-.todo-item .checkbox {
-    min-width: 20px;
-    min-height: 20px;
-    cursor: pointer;
-    accent-color: #CAFF59;
-    margin: 0;
-}
-
-.todo-item .description {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 150%;
-    color: #EAEAEA;
-    flex-grow: 1;
-    margin: 0;
-}
-
-.todo-item .actions {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.todo-item .actions .btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin: 0
-}
-
-.todo-item .actions .btn:hover svg path  {
-    fill: #504D4D;
-}
+.todo-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+.todo-item .details { display: flex; align-items: center; gap: 8px; }
+.task-label { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; min-height: 44px; cursor: pointer; }
+.checkbox { width: 20px; height: 20px; flex-shrink: 0; margin: 0; accent-color: var(--green); cursor: pointer; }
+.description { font-size: .9375rem; line-height: 1.6; overflow-wrap: anywhere; }
+.todo-item.completed .description { text-decoration: line-through; color: var(--muted); }
+.todo-item .date { display: block; margin: 0 0 0 32px; color: var(--muted); font-size: .6875rem; }
+.actions { display: flex; flex-shrink: 0; gap: 2px; }
+.btn { width: 44px; height: 44px; padding: 10px; display: grid; place-items: center; border: 0; border-radius: 10px; background: transparent; color: #58665b; cursor: pointer; transition: background-color .18s ease, color .18s ease; }
+.btn:hover { background: #e7eee3; color: var(--green); }
+.btn-delete:hover { background: #f7e6df; color: #913a26; }
+@media (max-width: 360px) { .todo-item .details { flex-wrap: wrap; } .task-label { flex-basis: 100%; } .actions { margin-left: 22px; } }

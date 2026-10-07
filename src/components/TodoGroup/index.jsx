@@ -1,22 +1,9 @@
-import { SubHeading } from "../SubHeading";
-import { ToDoItem } from "../ToDoItem";
-import { ToDoList } from "../ToDoList";
-
+import { SubHeading } from '../SubHeading';
+import { ToDoItem } from '../ToDoItem';
+import { ToDoList } from '../ToDoList';
 export function TodoGroup({ items, heading }) {
-  return (
-    <>
-      <SubHeading>{heading}</SubHeading>
-      <ToDoList>
-        {items
-          .map(function (t) {
-            return (
-              <ToDoItem
-                key={t.id}
-                item={t}
-              />
-            );
-          })}
-      </ToDoList>
-    </>
-  );
+  return <section aria-label={heading}>
+    <SubHeading>{heading}<span className="task-count">{items.length}</span></SubHeading>
+    {items.length ? <ToDoList>{items.map(t => <ToDoItem key={t.id} item={t} />)}</ToDoList> : <p className="group-empty">Tudo em dia. Que bom ter esse respiro!</p>}
+  </section>;
 }
